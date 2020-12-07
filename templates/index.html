@@ -7,34 +7,108 @@
 
 {% block body %} 
 
+<style>
+    .content-table{
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 700px;
+        max-width: 1000px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 12px 15px;
+    }
+
+    .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .content-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3
+    }
+
+    .content-table tbody tr:last-of-type{
+        border-bottom: 2px solid #009879
+    }
+
+    .text-field-form{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-field{
+        background-color: #f3f3f3;
+        width: 700px;
+        height: 35px;
+        border-radius: 4px;
+        border: 2px solid #009879;
+        resize: none;
+    }
+
+
+    .button{
+        background-color: #009879;
+        border: none;
+        color: white;
+        text-align: center;
+        border-radius: 5px 5px 0 0;
+        font-size: 16px;
+        font-weight: bold;
+        height: 35px;
+        cursor: pointer;
+    }
+
+</style>
+
 <div class="content">
 
     <h1 style="text-align: center">EEUU ELECTIONS 2020</h1>
 
-    <form action="/" method="POST">
-        <input type="text" name="content" id="content">
-        <input type="submit" value="Predict">
+    <form style="text-align: center" caction="/" method="POST">
+        <input class="text-field" type="text" name="content" id="content">
+        <input class="button" type="submit" value="Predict">
     </form>
 
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Added</th>
-            <th>Tweet</th>
-        </tr>
-
-        {% for tweet in tweets %}
+    <table class="content-table" >
+        <thead>
             <tr>
+                <th style="min-width: 75px">Date</th>
+                <th>Tweet</th>
+                <th>Trump</th>
+                <th>Biden</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for tweet in tweets %}
+            <tr>
+                <td>{{ tweet.date_created.date() }}</td>
                 <td>{{ tweet.content }}</td>
-                <td>{{ tweet.date_created.date()}}</td>
+                <td>50%</td>
+                <td>50%</td>
                 <td>
                     <a href="/delete/{{tweet.id}}">Delete</a>
-                    <br>
-                    <a href="">Update</a>
                 </td>
             </tr>
 
         {% endfor %}
+        </tbody>
+
     </table>    
 
 </div>
