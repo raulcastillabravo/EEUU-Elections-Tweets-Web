@@ -96,13 +96,12 @@
 
         To make the prediction, it uses a <b>Deep Learning Model</b> implemented in <b>Tensorflow</b>.
         
-        The full explanation about how has the <b>Machine Learning Model</b> been implemented is
+        The full explanation about how the <b>Machine Learning Model</b> has been implemented is
         in my 
         <a 
             href="https://raulcastillabravo.blogspot.com/2020/12/binary-text-classifier-for-eeuu.html" 
             target="blank">
-                personal blog
-        </a>.
+                personal blog</a>.
     </p>
 
     <p>
@@ -122,9 +121,8 @@
             <tr>
                 <th style="min-width: 75px">Date</th>
                 <th>Tweet</th>
-                <th>Trump</th>
-                <th>Biden</th>
-                <th>Actions</th>
+                <th style="min-width: 80px">In favor of</th>
+                <th>Action</th>
             </tr>
         </thead>
 
@@ -133,8 +131,7 @@
             <tr>
                 <td>{{ tweet.date_created.date() }}</td>
                 <td>{{ tweet.content }}</td>
-                <td>50%</td>
-                <td>50%</td>
+                <td>{{ tweet.politic}}</td>
                 <td>
                     <a href="/delete/{{tweet.id}}">Delete</a>
                 </td>
