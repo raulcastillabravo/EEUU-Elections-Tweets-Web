@@ -22,8 +22,6 @@ joblib
 Keras-Preprocessing==1.1.2
 Markdown==3.3.3
 MarkupSafe 
-mkl-fft
-mkl-random
 nltk 
 numpy 
 oauthlib==3.1.0
