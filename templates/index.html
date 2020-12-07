@@ -8,6 +8,14 @@
 {% block body %} 
 
 <style>
+    .explanation-text{
+        color:gray;
+        max-width: 750px;
+        position: center;
+        text-align: justify;
+        margin: 0 auto;
+    }
+
     .content-table{
         border-collapse: collapse;
         margin: 25px 0;
@@ -74,10 +82,36 @@
 
 </style>
 
+<h1 style="text-align: center">EEUU ELECTIONS 2020</h1>
+
+<div class="explanation-text">
+
+    <p>
+        Hi! My name is <b>Raúl Castilla Bravo</b> and I'm the author of this project.
+    </p>
+
+    <p>
+        This application lets you introduce a tweet related with the <b>USA elections 2020</b>
+        and it will predict if the tweet is in favor of Trump or Biden. 
+
+        To make the prediction, it uses a <b>Deep Learning Model</b> implemented in <b>Tensorflow</b>.
+        
+        The full explanation about how has the <b>Machine Learning Model</b> been implemented is
+        in my 
+        <a 
+            href="https://raulcastillabravo.blogspot.com/2020/12/binary-text-classifier-for-eeuu.html" 
+            target="blank">
+                personal blog
+        </a>.
+    </p>
+
+    <p>
+        <b>IMPORTANT:</b> tweets must be written in <b>English</b>.
+    </p>
+
+</div>
+
 <div class="content">
-
-    <h1 style="text-align: center">EEUU ELECTIONS 2020</h1>
-
     <form style="text-align: center" caction="/" method="POST">
         <input class="text-field" type="text" name="content" id="content">
         <input class="button" type="submit" value="Predict">
@@ -108,9 +142,7 @@
 
         {% endfor %}
         </tbody>
-
     </table>    
-
 </div>
 
 {% endblock %}
