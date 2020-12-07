@@ -23,8 +23,8 @@ Keras-Preprocessing==1.1.2
 Markdown==3.3.3
 MarkupSafe 
 mkl-fft
-mkl-random==1.1.1
-mkl-service==2.3.0
+mkl-random
+mkl-service
 nltk 
 numpy 
 oauthlib==3.1.0
