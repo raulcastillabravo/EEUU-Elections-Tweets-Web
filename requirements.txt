@@ -21,7 +21,7 @@ Jinja2==2.11.2
 joblib 
 Keras-Preprocessing==1.1.2
 Markdown==3.3.3
-MarkupSafe 
+MarkupSafe
 nltk 
 numpy==1.18.5
 oauthlib==3.1.0
@@ -31,7 +31,7 @@ protobuf==3.14.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 python-dateutil==2.8.1
-pytz 
+pytz
 regex 
 requests==2.25.0
 requests-oauthlib==1.3.0
@@ -40,7 +40,7 @@ six
 SQLAlchemy 
 tensorboard==2.4.0
 tensorboard-plugin-wit==1.7.0
-tensorflow-cpu
+tensorflow==2.3.1
 tensorflow-estimator==2.3.0
 termcolor==1.1.0
 tqdm 
