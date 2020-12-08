@@ -18,4 +18,4 @@ But don't worry, it's the Tensorflow model loading. You will be able to use the 
 
 Then, you can open a web browser and navigate to *localhost/8000* and you will see the app.
 
-If you want to see how the project has been done, check the post I have made in my [personal blog](https://raulcastillabravo.blogspot.com/2020/12/binary-text-classifier-for-eeuu.html).
+If you want to see how the DeepLearning model has been done, check the post I have made in my [personal blog](https://raulcastillabravo.blogspot.com/2020/12/binary-text-classifier-for-eeuu.html). You can download the DeepLearning project in this [link](https://github.com/raulcastillabravo/EEUU-Elections-Tweets-Tensorflow)
