@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 from Model import Model
 
-model = Model('./deeplearning_model/deployable_model')
+model = Model('./deeplearning_model/deployable_middle_model')
 
 # print(model.predict('My name is Raul'))
 
@@ -44,14 +44,6 @@ def index():
 
         try:
             num_tweets = db.session.query(Tweet.id).count()
-            print('*****************************************')
-            print(num_tweets)
-
-            older_date = db.session.query(func.min(Tweet.date_created)).scalar()
-
-            print('*****************************************')
-            print(older_date)
-
             while num_tweets > 9:
                 tweet_to_delete = Tweet.query.order_by(Tweet.date_created.asc()).first()
                 db.session.delete(tweet_to_delete)
